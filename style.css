@@ -3,184 +3,170 @@
 }
 
 :root {
-  --bg: #fafbfc;
-  --text: #1f2328;
-  --sub: #57606a;
-  --line: #d8dee4;
-  --link: #0969da;
-  --accent: #7c3aed;
-  --news-bg: #f6f8ff;
-  --pub-bg: #fff8f2;
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --sub: #6b7280;
+  --line: #e5e7eb;
+  --link: #2563eb;
+  --news-bg: #f0f7ff;
+  --news-line: #cfe3ff;
+  --pub-bg: #fff7ed;
+  --pub-line: #fed7aa;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.65;
+  font-size: 14px; /* 整体变小 */
 }
 
 a {
   color: var(--link);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-.topbar {
-  border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
-}
-
 .container {
-  width: min(1060px, 92%);
+  width: min(1040px, 92%);
   margin: 0 auto;
 }
 
+.topbar {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(4px);
+}
+
 .nav {
-  height: 54px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.name {
-  font-size: 18px;
+.brand {
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
 
 .menu a {
-  margin-left: 14px;
-  color: #374151;
-  font-size: 14px;
+  margin-left: 12px;
+  font-size: 13px;
+  color: #4b5563;
 }
 
 .layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 30px;
-  padding: 24px 0 40px;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  padding: 20px 0 36px;
 }
 
 .sidebar {
-  border-right: 1px solid var(--line);
-  padding-right: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  height: fit-content;
 }
 
 .avatar {
-  width: 165px;
-  height: 165px;
-  border-radius: 12px;
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
   object-fit: cover;
   border: 1px solid var(--line);
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .sidebar h1 {
-  margin: 8px 0 6px;
-  font-size: 36px;
+  margin: 6px 0 6px;
+  font-size: 28px; /* 缩小 */
   line-height: 1.1;
 }
 
-.sidebar p {
-  margin: 5px 0;
+.meta {
+  margin: 4px 0;
   color: var(--sub);
-  font-size: 15px;
+  font-size: 13px;
+}
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
 }
 
 .content section {
-  margin-bottom: 28px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
 }
 
 .content h2 {
   margin: 0 0 8px;
-  font-size: 28px;
-  line-height: 1.25;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 6px;
-  letter-spacing: -0.2px;
+  font-size: 20px; /* 缩小 */
+  line-height: 1.2;
 }
 
 .content p,
 .content ul {
-  margin: 10px 0 0;
-  font-size: 16px;
+  margin: 6px 0 0;
+  font-size: 14px; /* 缩小 */
 }
 
 .content ul {
-  padding-left: 22px;
+  padding-left: 18px;
 }
 
 .paper-title {
   font-weight: 700;
-  font-size: 19px;
+  font-size: 15px;
   line-height: 1.45;
 }
 
-/* News & Publication 小卡片（克制） */
-.highlight-news {
+.box {
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+
+.news-box {
   background: var(--news-bg);
-  border: 1px solid #dce6ff;
-  border-radius: 10px;
-  padding: 12px 14px;
+  border: 1px solid var(--news-line);
 }
 
-.highlight-pub {
+.pub-box {
   background: var(--pub-bg);
-  border: 1px solid #ffe4cc;
-  border-radius: 10px;
-  padding: 14px;
-}
-
-.badge {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-
-.badge-news {
-  background: #e8f0ff;
-  color: #194fbf;
-}
-
-.badge-accept {
-  background: #ffe9d6;
-  color: #9a3412;
-}
-
-.accent {
-  color: var(--accent);
-  font-weight: 600;
+  border: 1px solid var(--pub-line);
 }
 
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .sidebar {
-    border-right: none;
-    border-bottom: 1px solid var(--line);
-    padding-right: 0;
-    padding-bottom: 14px;
   }
 
   .sidebar h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .content h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
