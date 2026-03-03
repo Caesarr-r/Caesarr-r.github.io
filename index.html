@@ -4,45 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xu Wang</title>
+  <meta name="description" content="Xu Wang | Undergraduate Student at Shandong University" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#">Xu Wang</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#interests">Interests</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="card profile">
       <img src="assets/profile.jpg" alt="Xu Wang" class="avatar" />
       <h1>Xu Wang</h1>
-      <p>Undergraduate Student (2023–2027)</p>
-      <p>Shandong University</p>
-      <p><a href="mailto:your_email@example.com">Email</a></p>
-      <p><a href="https://github.com/your_username" target="_blank">GitHub</a></p>
+      <p class="muted">Undergraduate Student (2023–2027)</p>
+      <p class="muted">Shandong University</p>
+
+      <div class="links">
+        <a href="mailto:your_email@example.com">Email</a>
+        <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </aside>
 
-    <main class="content">
-      <h2>About</h2>
-      <p>
-        I am an undergraduate student at <b>Shandong University</b> (2023–2027),
-        working on machine learning and graph data mining.
-      </p>
+    <section class="content">
+      <section id="about" class="card section">
+        <h2>About</h2>
+        <p>
+          I am an undergraduate student at <strong>Shandong University</strong> (2023–2027),
+          working on machine learning and graph data mining.
+          My recent research focuses on out-of-distribution detection for text-attributed graphs.
+        </p>
+      </section>
 
-      <h2>News</h2>
-      <ul>
-        <li><b>[Mar 02, 2026]</b> One paper was accepted by <b>Knowledge-Based Systems (KBS)</b>.</li>
-      </ul>
+      <section id="news" class="card section">
+        <h2>News</h2>
+        <ul>
+          <li>
+            <span class="date">Mar 02, 2026</span>
+            One paper was accepted by <strong>Knowledge-Based Systems (KBS)</strong>.
+          </li>
+        </ul>
+      </section>
 
-      <h2>Publication</h2>
-      <p>
-        <b>Towards Effective Few-Shot OOD Detection for Text-Attributed Graphs via Topology-Text Consensus Modeling</b><br />
-        <b>Xu Wang</b>, Yinlin Zhu, Xunkai Li, Meixia Qu, Wenyu Wang<br />
-        <i>Knowledge-Based Systems (KBS)</i>, 2026. (Accepted on March 02, 2026)
-      </p>
+      <section id="publications" class="card section">
+        <h2>Publications</h2>
+        <article class="pub">
+          <h3>Towards Effective Few-Shot OOD Detection for Text-Attributed Graphs via Topology-Text Consensus Modeling</h3>
+          <p><strong>Xu Wang</strong>, Yinlin Zhu, Xunkai Li, Meixia Qu, Wenyu Wang</p>
+          <p><em>Knowledge-Based Systems (KBS)</em>, 2026. (Accepted on March 02, 2026)</p>
+        </article>
+      </section>
 
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Graph Machine Learning</li>
-        <li>Out-of-Distribution Detection</li>
-        <li>Text-Attributed Graphs</li>
-      </ul>
-    </main>
-  </div>
+      <section id="interests" class="card section">
+        <h2>Research Interests</h2>
+        <ul class="tags">
+          <li>Graph Machine Learning</li>
+          <li>Out-of-Distribution Detection</li>
+          <li>Text-Attributed Graphs</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 Xu Wang
+  </footer>
 </body>
 </html>
