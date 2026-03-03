@@ -10,14 +10,14 @@
 <body>
   <header class="topbar">
     <div class="container nav">
-      <div class="name">Xu Wang</div>
-      <div class="menu">
+      <div class="brand">Xu Wang</div>
+      <nav class="menu">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -25,10 +25,13 @@
     <aside class="sidebar">
       <img src="assets/profile.jpg" alt="Xu Wang" class="avatar" />
       <h1>Xu Wang</h1>
-      <p>Undergraduate Student (2023–2027)</p>
-      <p>Shandong University</p>
-      <p><a href="mailto:your_email@example.com">Email</a></p>
-      <p><a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+      <p class="meta">Undergraduate Student (2023–2027)</p>
+      <p class="meta">Shandong University</p>
+
+      <div class="links">
+        <a href="mailto:your_email@example.com">Email</a>
+        <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </aside>
 
     <section class="content">
@@ -39,9 +42,8 @@
           My past and current research mainly focuses on <strong>text-attributed graphs (TAG)</strong>.
         </p>
         <p>
-          Within TAG, I have explored several reliability-related topics, where
-          <strong>out-of-distribution (OOD) detection</strong> is one small direction.
-          This line of work led to my recent paper accepted by <strong>Knowledge-Based Systems (KBS)</strong>.
+          Within this main line, <strong>out-of-distribution (OOD) detection</strong> is a relatively small sub-direction,
+          which led to our recent KBS-accepted paper.
         </p>
         <p>
           My future research will focus more on <strong>multimodal attributed graphs (MAG)</strong>.
@@ -58,26 +60,20 @@
       </section>
 
       <section id="news">
-        <h2>News <span class="badge badge-news">Latest</span></h2>
-        <div class="highlight-news">
-          <p>
-            (≧▽≦) <strong>[Mar 02, 2026]</strong> One paper was accepted by
-            <strong>Knowledge-Based Systems (KBS)</strong>!
-          </p>
+        <h2>News 🥳</h2>
+        <div class="box news-box">
+          <p><strong>📅 Mar 02, 2026</strong> — One paper was accepted by <strong>Knowledge-Based Systems (KBS)</strong> ��</p>
         </div>
       </section>
-      
+
       <section id="publications">
-        <h2>Publication <span class="badge badge-accept">Accepted</span></h2>
-        <div class="highlight-pub">
+        <h2>Publication 🚀</h2>
+        <div class="box pub-box">
           <p class="paper-title">
             Towards Effective Few-Shot OOD Detection for Text-Attributed Graphs via Topology-Text Consensus Modeling
           </p>
           <p><strong>Xu Wang</strong>, Yinlin Zhu, Xunkai Li, Meixia Qu, Wenyu Wang</p>
-          <p>
-            <em>Knowledge-Based Systems (KBS)</em>, 2026.
-            <span class="accent">(Accepted on March 02, 2026)</span> ٩(ˊᗜˋ*)و
-          </p>
+          <p><em>Knowledge-Based Systems (KBS)</em>, 2026. (Accepted on March 02, 2026) ✅</p>
         </div>
       </section>
 
