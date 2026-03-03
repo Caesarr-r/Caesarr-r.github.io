@@ -2,130 +2,168 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #fafbfc;
+  --text: #1f2328;
+  --sub: #57606a;
+  --line: #d8dee4;
+  --link: #0969da;
+  --accent: #7c3aed;
+  --news-bg: #f6f8ff;
+  --pub-bg: #fff8f2;
+}
+
 body {
   margin: 0;
-  color: #111;
-  background: #fff;
-  font-family: "Times New Roman", Georgia, serif;
-  line-height: 1.55;
-  font-size: 18px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
 }
 
 a {
-  color: #003a8c;
+  color: var(--link);
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
-/* 顶部导航：不粘性、不花哨 */
 .topbar {
-  border-bottom: 1px solid #ddd;
-  background: #fff;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
 }
 
 .container {
-  width: min(1060px, 94%);
+  width: min(1060px, 92%);
   margin: 0 auto;
 }
 
 .nav {
+  height: 54px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  justify-content: space-between;
 }
 
 .name {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
 .menu a {
-  margin-left: 16px;
-  color: #222;
-  font-size: 17px;
+  margin-left: 14px;
+  color: #374151;
+  font-size: 14px;
 }
 
-/* 主体布局：典型学术主页左右结构 */
 .layout {
   display: grid;
   grid-template-columns: 260px 1fr;
-  gap: 34px;
+  gap: 30px;
   padding: 24px 0 40px;
 }
 
 .sidebar {
-  padding-right: 18px;
-  border-right: 1px solid #e2e2e2;
+  border-right: 1px solid var(--line);
+  padding-right: 20px;
 }
 
 .avatar {
-  width: 180px;
-  height: 180px;
-  border-radius: 4px; /* 改成方形头像，更学术主页感 */
+  width: 165px;
+  height: 165px;
+  border-radius: 12px;
   object-fit: cover;
-  border: 1px solid #ccc;
+  border: 1px solid var(--line);
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .sidebar h1 {
-  margin: 8px 0 8px;
-  font-size: 48px;
-  line-height: 1.05;
-  font-weight: 700;
+  margin: 8px 0 6px;
+  font-size: 36px;
+  line-height: 1.1;
 }
 
 .sidebar p {
   margin: 5px 0;
-  font-size: 19px;
+  color: var(--sub);
+  font-size: 15px;
 }
 
-/* 去掉卡片感，纯文本学术排版 */
 .content section {
   margin-bottom: 28px;
 }
 
 .content h2 {
   margin: 0 0 8px;
-  font-size: 38px;
-  line-height: 1.15;
-  border-bottom: 1px solid #ddd;
+  font-size: 28px;
+  line-height: 1.25;
+  border-bottom: 1px solid var(--line);
   padding-bottom: 6px;
-  font-weight: 700;
+  letter-spacing: -0.2px;
 }
 
 .content p,
 .content ul {
-  margin: 8px 0 0;
-  font-size: 31px;
+  margin: 10px 0 0;
+  font-size: 16px;
 }
 
 .content ul {
-  padding-left: 24px;
+  padding-left: 22px;
 }
 
 .paper-title {
   font-weight: 700;
+  font-size: 19px;
+  line-height: 1.45;
 }
 
-/* 如果你页面里还保留了 card 类，把阴影圆角都去掉 */
-.card {
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
+/* News & Publication 小卡片（克制） */
+.highlight-news {
+  background: var(--news-bg);
+  border: 1px solid #dce6ff;
+  border-radius: 10px;
+  padding: 12px 14px;
 }
 
-@media (max-width: 920px) {
-  body {
-    font-size: 17px;
-  }
+.highlight-pub {
+  background: var(--pub-bg);
+  border: 1px solid #ffe4cc;
+  border-radius: 10px;
+  padding: 14px;
+}
 
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.badge-news {
+  background: #e8f0ff;
+  color: #194fbf;
+}
+
+.badge-accept {
+  background: #ffe9d6;
+  color: #9a3412;
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
   .layout {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -133,16 +171,16 @@ a:hover {
 
   .sidebar {
     border-right: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--line);
     padding-right: 0;
     padding-bottom: 14px;
   }
 
   .sidebar h1 {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .content h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
