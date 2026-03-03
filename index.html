@@ -4,130 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xu Wang</title>
-  <meta name="description" content="Xu Wang | Undergraduate Researcher at Shandong University" />
+  <meta name="description" content="Xu Wang | Undergraduate Student at Shandong University" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="nav-wrap">
-    <nav class="nav container">
-      <a class="logo" href="#top">Xu Wang</a>
-      <div class="nav-links">
+  <header class="topbar">
+    <div class="container nav">
+      <div class="name">Xu Wang</div>
+      <div class="menu">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero container">
-      <div class="hero-text">
-        <p class="kicker">Undergraduate Researcher · 2023–2027</p>
-        <h1>
-          Building reliable machine learning methods
-          for <span>text-attributed graphs</span>.
-        </h1>
-        <p class="lead">
-          I am Xu Wang, an undergraduate student at Shandong University.
-          My current research focuses on out-of-distribution detection,
-          graph learning, and robust modeling for real-world structured data.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#publications">View Publication</a>
-          <a class="btn ghost" href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/profile.jpg" alt="Xu Wang" />
-      </div>
-    </section>
+  <main class="container layout">
+    <aside class="sidebar">
+      <img src="assets/profile.jpg" alt="Xu Wang" class="avatar" />
+      <h1>Xu Wang</h1>
+      <p>Undergraduate Student (2023–2027)</p>
+      <p>Shandong University</p>
+      <p><a href="mailto:your_email@example.com">Email</a></p>
+      <p><a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </aside>
 
-    <!-- About -->
-    <section id="about" class="section container">
-      <h2>About</h2>
-      <div class="card">
+    <section class="content">
+      <section id="about">
+        <h2>About</h2>
         <p>
-          I am currently pursuing my B.Eng. degree at <strong>Shandong University</strong> (2023–2027).
-          I work on machine learning for graph-structured data, with a particular interest in
-          <strong>out-of-distribution (OOD) generalization</strong> and <strong>data-centric graph intelligence</strong>.
+          I am an undergraduate student at <strong>Shandong University</strong> (2023–2027), working on graph machine learning.
+          My past and current research mainly focuses on <strong>text-attributed graphs (TAG)</strong>.
         </p>
         <p>
-          My goal is to design practical and theoretically grounded methods that remain robust when
-          deployment conditions differ from training distributions, especially for text-attributed graphs.
-        </p>
-      </div>
-    </section>
-
-    <!-- Research -->
-    <section id="research" class="section container">
-      <h2>Research Focus</h2>
-      <div class="grid-3">
-        <article class="card">
-          <h3>Graph Machine Learning</h3>
-          <p>Representation learning and robust reasoning on attributed and text-enhanced graphs.</p>
-        </article>
-        <article class="card">
-          <h3>OOD Detection</h3>
-          <p>Few-shot and distribution-shift settings for reliable deployment in open environments.</p>
-        </article>
-        <article class="card">
-          <h3>Data-Centric AI</h3>
-          <p>Improving model reliability through data quality, topology-text consistency, and evaluation protocols.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- News -->
-    <section id="news" class="section container">
-      <h2>News</h2>
-      <div class="card timeline">
-        <div class="item">
-          <div class="date">Mar 02, 2026</div>
-          <div class="content">
-            One paper accepted by <strong>Knowledge-Based Systems (KBS)</strong>.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications" class="section container">
-      <h2>Selected Publication</h2>
-      <article class="card pub">
-        <p class="venue">Knowledge-Based Systems (KBS), 2026 · Accepted</p>
-        <h3>Towards Effective Few-Shot OOD Detection for Text-Attributed Graphs via Topology-Text Consensus Modeling</h3>
-        <p class="authors"><strong>Xu Wang</strong>, Yinlin Zhu, Xunkai Li, Meixia Qu, Wenyu Wang</p>
-        <p class="desc">
-          We study few-shot OOD detection on text-attributed graphs and propose a topology-text consensus framework
-          to improve robustness under distribution shift.
-        </p>
-      </article>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <div class="card contact">
-        <p>If you are interested in collaboration, feel free to reach out.</p>
-        <p>
-          Email:
-          <a href="mailto:your_email@example.com">your_email@example.com</a>
+          Within TAG, I have explored several reliability-related topics, where
+          <strong>out-of-distribution (OOD) detection</strong> is one small direction.
+          This line of work led to my recent paper accepted by <strong>Knowledge-Based Systems (KBS)</strong>.
         </p>
         <p>
-          GitHub:
-          <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">
-            github.com/your_username
-          </a>
+          My future research will focus more on <strong>multimodal attributed graphs (MAG)</strong>.
         </p>
-      </div>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+        <ul>
+          <li><strong>Main track (Past & Current):</strong> Text-Attributed Graphs (TAG)</li>
+          <li><strong>Sub-direction:</strong> OOD detection for TAG</li>
+          <li><strong>Future direction:</strong> Multimodal Attributed Graphs (MAG)</li>
+        </ul>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <ul>
+          <li><strong>[Mar 02, 2026]</strong> One paper was accepted by <strong>Knowledge-Based Systems (KBS)</strong>.</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Publication</h2>
+        <p class="paper-title">
+          Towards Effective Few-Shot OOD Detection for Text-Attributed Graphs via Topology-Text Consensus Modeling
+        </p>
+        <p>
+          <strong>Xu Wang</strong>, Yinlin Zhu, Xunkai Li, Meixia Qu, Wenyu Wang
+        </p>
+        <p>
+          <em>Knowledge-Based Systems (KBS)</em>, 2026. (Accepted on March 02, 2026)
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">github.com/your_username</a></p>
+      </section>
     </section>
   </main>
-
-  <footer class="footer container">
-    <p>© 2026 Xu Wang</p>
-  </footer>
 </body>
 </html>
